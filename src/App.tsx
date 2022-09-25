@@ -8,16 +8,12 @@ import IpInfo from './components/IpInfo';
 import { IAddress } from './components/types/types';
 
 
-const defaultPosition = {
-  lat: 52.26815737376817,
-  lng: 21.02783203125,
-  zoom: 13
-};
+
 const apiKey = 'at_5s6URTKZrvRQEwjfCE7SepkWYG8vM';
 
 function App() {
-  
-  const [position, setPosition] = useState<[number, number]>([defaultPosition.lat, defaultPosition.lng]);
+
+  const [position, setPosition] = useState<[number, number]>();
   const [addressInfo, setAddressInfo] = useState<IAddress | undefined>();
   const [ip, setIp] = useState<number | undefined>();
 
@@ -51,7 +47,7 @@ function App() {
     <div className="App">
       <TrackerForm ip={ip} findIpData={findIpData}/>
       <IpInfo addressInfo={addressInfo}/>
-      <Map position={position} zoom={defaultPosition.zoom}/>
+      <Map position={position}/>
     </div>
   );
 }
