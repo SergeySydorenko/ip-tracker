@@ -46,7 +46,7 @@ function App() {
   return (
     <div className="App">
       <TrackerForm ip={ip} findIpData={findIpData}/>
-      <IpInfo addressInfo={addressInfo}/>
+      {position ? <IpInfo addressInfo={addressInfo}/> : null}
       <Map position={position}/>
     </div>
   );
