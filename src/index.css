@@ -1,4 +1,5 @@
-@import url(./components/TrackerForm.scss);
+@import url(./components/_TrackerForm.scss);
+@import url(./components/_Map.scss);
 * {
   margin: 0;
   padding: 0;
